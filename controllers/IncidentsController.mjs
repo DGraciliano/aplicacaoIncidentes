@@ -12,27 +12,12 @@ export default class IncidentsControler {
         const userID = req.session.userid
 
         // Parte da busca por incidentes usando palavras chave
-        let search = ''
-
-        if(req.query.search) {
-            search = req.query.search
-        }
-
-        let order = 'DESC'
-
-        if(req.query.order === 'old'){
-            order = 'ASC'
-        } else {
-            order = 'DESC'
-        }
+        let order = 'ASC'
 
         // Busca a instância de todos os incidentes no banco de dados
         const incidentsData = await Incident.findAll({
             include: User,
-            where: {
-                description: {[Op.like]: `%${search}%`},
-            },
-            order: [['createdAt', order]]
+            order: [['riskLevel', 'DESC'], ['createdAt', 'ASC']]
         })
 
         // Comando pega apenas os valores (dataValues)
@@ -51,7 +36,7 @@ export default class IncidentsControler {
             // Se não, define 'user' como null
             const user = userInstance ? userInstance.get({ plain: true }) : null;
 
-            res.render('incidents/home', { user, search, incidents});
+            res.render('incidents/home', { user, incidents});
         }
     }
 
