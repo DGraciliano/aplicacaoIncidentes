@@ -1,0 +1,362 @@
+* {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+/* NAVBAR */
+
+#logo img {
+    height: 40px;
+}
+
+#navbar {
+    padding: 1.2em 1.4em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    border-bottom: 1px solid #44fc1f;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin-left: 1em;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover {
+    color: #44fc1f;
+}
+
+/* CONTAINER */
+
+.container {
+    min-height: 10vh;
+    padding: 2em;
+}
+
+
+
+/* MESSAGES */
+.message {
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto 2em;
+    max-width: 60%;
+}
+
+/* LOGIN e REGISTER */
+.auth-container {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container h2 {
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 4px solid #44fc1f;
+    padding: 0.3em;
+    width: 100px;
+}
+
+.auth-container a {
+    color: #44fc1f;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #44fc1f;
+    height: 25px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form__riskGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    justify-content:space-around;
+}
+
+.form__riskGroup label {
+    margin-bottom: 2em;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.form__riskGroup select{
+    margin-bottom: 2em;
+    font-size: 1em;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+form input[type='submit'],
+.btn {
+    background-color: transparent;
+    color: #44fc1f;
+    border: 2px solid #44fc1f;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+form input[type='submit']:hover,
+.btn:hover {
+    background-color: #44fc1f;
+    color: #fff;
+}
+
+form input[type='reset'] {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #00ffea;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+form input[type='reset']:hover {
+    background-color: #004e48;
+    color: #fff;
+}
+
+/* CREATE / EDIT FORM */
+.incident-form-container a {
+    color: #44fc1f;
+}
+
+.incident-form-container a:hover {
+    color: #fff;
+}
+
+.incident-form-container h1 {
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 4px solid #44fc1f;
+    padding: 0.3em;
+}
+
+.incident-form-container form {
+    max-width: 60%;
+    margin-top: 1.5em;
+}
+
+/* DASHBOARD */
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.title-container h2 {
+    border-left: 4px solid #44fc1f;
+    padding: 10px;
+}
+
+.dashboard h3 {
+    margin-bottom: 1.5em;
+}
+
+.dashboard ul {
+    list-style: none;
+}
+
+.dashboard li {
+    padding: 12px;
+    border-bottom: 1px solid #44fc1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dashboard a {
+    color: #44fc1f;
+}
+
+.dashboard .label {
+    font-weight: bold;
+    color: #44fc1f;
+}
+
+.dashboard .actions {
+    display: flex;
+}
+
+.dashboard .actions .btn {
+    color: #fff;
+    border-color: #fff;
+    margin: 0 0.5em;
+}
+
+/* HOME */
+
+.home__header {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home__header h1 {
+    margin-bottom: 1em;
+}
+
+.home__header span {
+    color: #44fc1f;
+}
+
+.home__header p,
+.home__header form {
+    margin-bottom: 1.2em;
+}
+
+.home__header input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0.5em;
+    margin-right: 1em;
+}
+
+.home__header input[type='text'] {
+    width: 60%;
+}
+
+.home__header input::placeholder {
+    color: #fff;
+}
+
+.order__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 1em;
+}
+
+.order__container span {
+    font-weight: bold;
+    color: #fff;
+}
+
+.order__container form {
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.order__container button:hover,
+.order__container i:hover,
+.order__container a:hover {
+    color: #44fc1f;
+}
+
+.order__container button,
+.order__container i,
+.order__container a {
+    margin: 0 7px;
+}
+
+.thoughts__container figure {
+    border-bottom: 1px solid #333;
+    padding: 0.5em;
+    max-width: 50%;
+    margin: 0 auto 1em;
+}
+
+.thoughts__container blockquote {
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: .4em;
+}
+
+.thoughts__container span {
+    color: #44fc1f;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+
+/* FOOTER */
+
+footer {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #44fc1f;
+
+}
+
+footer span {
+    font-weight: bold;
+    color: #44fc1f;
+}

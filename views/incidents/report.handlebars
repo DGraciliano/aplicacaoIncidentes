@@ -1,0 +1,54 @@
+<div class="incident-form-container">
+    <h1>Reportando um incidente:</h1>
+    <form action="/incidents/add" method="post">
+    <div class="form-control">
+        <label for="name">Descrição do incidente:</label>
+        <input type="textarea" name="description" placeholder="Descreva o incidente...">
+    </div>
+    <div class="form__riskGroup">    
+        <div>
+            <label for="riskGroup">Selecione o grupo de risco:</label>
+            <select name="riskGroup" id="riskGroup">
+                <option value="1">Físico</option>
+                <option value="2">Químico</option>
+                <option value="3">Biológico</option>
+                <option value="4">Ergonômico</option>
+                <option value="5">Acidente - Mecânico</option>
+            </select>
+        </div>
+
+        <div class="form__severity">
+            <label for="severity">Qual a gravidade do incidente?</label>
+            <select name="severity" id="severity">
+                <option value="1">Muito baixa</option>
+                <option value="2">Baixa</option>
+                <option value="3">Moderada</option>
+                <option value="4">Grave</option>
+                <option value="5">Muito Grave</option>
+            </select>
+        </div>
+        <div class="form__urgency">
+            <label for="urgency">Qual a urgência do incidente?</label>
+            <select name="urgency" id="urgency">
+                <option value="1">Não é urgente</option>
+                <option value="2">Pouco urgente</option>
+                <option value="3">Urgente</option>
+                <option value="4">Bastante urgente</option>
+                <option value="5">Muito Urgente</option>
+            </select>
+        </div>
+        <div class="form__tendency">
+            <label for="tendency">Qual a tendência no tempo do incidente?</label>
+            <select name="tendency" id="tendency">
+                <option value="1">Não irá piorar</option>
+                <option value="2">Vai piorar em longo prazo</option>
+                <option value="3">Vai piorar em médio prazo</option>
+                <option value="4">Vai piorar em curto prazo</option>
+                <option value="5">Vai piorar imediatamente</option>
+            </select>
+        </div>
+
+    <input type="submit" value="Reportar incidente">
+    <input type="reset" value="Limpar campos">
+    </form>
+</div>
